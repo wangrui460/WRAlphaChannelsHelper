@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="haH-H3-gAw">
+                                <rect key="frame" x="97" y="50" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Saw-7q-Pom"/>
+                                    <constraint firstAttribute="width" constant="180" id="h3v-r3-ipF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lAR-mm-PRc">
+                                <rect key="frame" x="97" y="366" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="b08-vy-jd1"/>
+                                    <constraint firstAttribute="width" constant="180" id="bgv-cR-r6M"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-oo-fL9">
+                                <rect key="frame" x="76" y="280" width="222" height="36"/>
+                                <color key="backgroundColor" red="0.28627450980000002" green="0.71372549019999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="remove of alpha channels">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAlphaChannels:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elo-Gb-Wyp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="click" translatesAutoresizingMaskIntoConstraints="NO" id="h7Z-mI-85E">
+                                <rect key="frame" x="271" y="195" width="104" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="0lf-6J-2ll"/>
+                                    <constraint firstAttribute="height" constant="83" id="nc3-XA-SGK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eyj-oo-fL9" firstAttribute="top" secondItem="haH-H3-gAw" secondAttribute="bottom" constant="50" id="0Nv-bI-npg"/>
+                            <constraint firstItem="lAR-mm-PRc" firstAttribute="height" secondItem="haH-H3-gAw" secondAttribute="height" id="7Ac-Ts-4Gd"/>
+                            <constraint firstItem="eyj-oo-fL9" firstAttribute="centerX" secondItem="haH-H3-gAw" secondAttribute="centerX" id="Ahr-Zu-r4H"/>
+                            <constraint firstItem="lAR-mm-PRc" firstAttribute="width" secondItem="haH-H3-gAw" secondAttribute="width" id="B06-T4-EUG"/>
+                            <constraint firstItem="haH-H3-gAw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HOI-Ou-z9w"/>
+                            <constraint firstItem="h7Z-mI-85E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JSN-JE-eEK"/>
+                            <constraint firstItem="lAR-mm-PRc" firstAttribute="leading" secondItem="haH-H3-gAw" secondAttribute="trailing" constant="-180" id="QTl-nM-QLz"/>
+                            <constraint firstItem="eyj-oo-fL9" firstAttribute="top" secondItem="h7Z-mI-85E" secondAttribute="bottom" constant="2" id="RIn-TT-z0f"/>
+                            <constraint firstItem="lAR-mm-PRc" firstAttribute="top" secondItem="eyj-oo-fL9" secondAttribute="bottom" constant="50" id="Scm-H4-1an"/>
+                            <constraint firstItem="haH-H3-gAw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WXM-LJ-ESs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changedImageView" destination="lAR-mm-PRc" id="gxB-Ic-DKr"/>
+                        <outlet property="originalImageView" destination="haH-H3-gAw" id="iK3-CV-gK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="click" width="180" height="138"/>
+        <image name="me" width="527" height="527"/>
+    </resources>
+</document>
